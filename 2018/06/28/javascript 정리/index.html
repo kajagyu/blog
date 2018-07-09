@@ -7,17 +7,17 @@
   
   <title>javascript 정리 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="image 파일 업로드 및 파일 정보 가져오기">
+  <meta name="description" content="URL 경로 파싱하기URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname  -&amp;gt; URL 경로 가져옴window.location.pathname.split(‘/‘)  -&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathName[pa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript 정리">
 <meta property="og:url" content="https://kajagyu.github.io/blog/2018/06/28/javascript 정리/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="image 파일 업로드 및 파일 정보 가져오기">
+<meta property="og:description" content="URL 경로 파싱하기URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname  -&amp;gt; URL 경로 가져옴window.location.pathname.split(‘/‘)  -&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathName[pa">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-29T06:36:31.648Z">
+<meta property="og:updated_time" content="2018-07-09T07:28:22.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript 정리">
-<meta name="twitter:description" content="image 파일 업로드 및 파일 정보 가져오기">
+<meta name="twitter:description" content="URL 경로 파싱하기URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname  -&amp;gt; URL 경로 가져옴window.location.pathname.split(‘/‘)  -&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathName[pa">
   
     <link rel="alternate" href="/blog/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -86,11 +86,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="image-파일-업로드-및-파일-정보-가져오기"><a href="#image-파일-업로드-및-파일-정보-가져오기" class="headerlink" title="image 파일 업로드 및 파일 정보 가져오기"></a>image 파일 업로드 및 파일 정보 가져오기</h2>
+        <h2 id="URL-경로-파싱하기"><a href="#URL-경로-파싱하기" class="headerlink" title="URL 경로 파싱하기"></a>URL 경로 파싱하기</h2><p>URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용<br>아래의 예에 대한 설명을 다음과 같음<br>window.location.pathname<br>  -&gt; URL 경로 가져옴<br>window.location.pathname.split(‘/‘)<br>  -&gt; URL 경로를 / 로 split하여 배열 데이터로 초기화<br>pathName[pathName.length - 1]<br>  -&gt; 배열 데이터에 들어있는 URL 경로에서 맨 마지막 경로명을 가져와서 초기화</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pathName = <span class="built_in">window</span>.location.pathname.split(<span class="string">'/'</span>);</span><br><span class="line"><span class="keyword">var</span> lastUrlName = pathName[pathName.length - <span class="number">1</span>];</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://kajagyu.github.io/blog/2018/06/28/javascript 정리/" data-id="cjj9k43950001kzz3cae6u8rw" class="article-share-link">Share</a>
+      <a data-url="https://kajagyu.github.io/blog/2018/06/28/javascript 정리/" data-id="cjjdy3nw10000mjz3i9ynhurz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -99,11 +101,11 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/2018/06/28/react 에러 정리/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2018/06/28/react 정리/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          react 에러 정리
+          react
         
       </div>
     </a>
@@ -156,11 +158,11 @@
           </li>
         
           <li>
-            <a href="/blog/2018/06/28/react 정리/">react</a>
+            <a href="/blog/2018/06/28/react 에러 정리/">react 에러 정리</a>
           </li>
         
           <li>
-            <a href="/blog/2018/06/28/react 에러 정리/">react 에러 정리</a>
+            <a href="/blog/2018/06/28/react 정리/">react</a>
           </li>
         
           <li>
