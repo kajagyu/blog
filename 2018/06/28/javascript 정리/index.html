@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="URL 경로 파싱하기URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname-&amp;gt; URL 경로 가져옴window.location.pathname.split(&amp;#39;/&amp;#39;)-&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathNam">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-12T01:09:14.542Z">
+<meta property="og:updated_time" content="2018-07-12T01:11:50.686Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript 정리">
 <meta name="twitter:description" content="URL 경로 파싱하기URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname-&amp;gt; URL 경로 가져옴window.location.pathname.split(&amp;#39;/&amp;#39;)-&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathNam">
@@ -97,7 +97,7 @@
 <h2 id="자바스크립트-에러인지-감지하는-함수"><a href="#자바스크립트-에러인지-감지하는-함수" class="headerlink" title="자바스크립트 에러인지 감지하는 함수"></a>자바스크립트 에러인지 감지하는 함수</h2><p>자바스크립트 내에 에러가 발생한다면 에러를 감지하는 window 객체 메소드가 있음<br>그 코드는 아래와 같음</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">blockError</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>; <span class="comment">// return true로 할 시 에러를 발생시키지 않습니다</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">window</span>.onerror = blockError; <span class="comment">// window.onerror 함수를 통해 에러를 감지합니다</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">  e /</span><span class="regexp">/ 에러를 유발하는 코드입니다</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="마우스오버-마우스아웃"><a href="#마우스오버-마우스아웃" class="headerlink" title="마우스오버, 마우스아웃"></a>마우스오버, 마우스아웃</h2><p>해당영역에 마우스가 올라가면 마우스 오버, 해당 영역 밖에 마우스가 위치하면 마우스 아웃.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span></span></span><br><span class="line"><span class="tag">   <span class="attr">onmouseover</span>=<span class="string">"document.menu1.src='http://www.blueb.co.kr/SRC/flash/image/thum_03.jpg'"</span></span></span><br><span class="line"><span class="tag">   <span class="attr">onmouseout</span>=<span class="string">"document.menu1.src='http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg'"</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg"</span> <span class="attr">name</span>=<span class="string">"menu1"</span> <span class="attr">border</span>=<span class="string">"0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span></span></span><br><span class="line"><span class="tag">   <span class="attr">onmouseover</span>=<span class="string">"document.menu2.src='http://www.blueb.co.kr/SRC/flash/image/thum_01.jpg'"</span></span></span><br><span class="line"><span class="tag">   <span class="attr">onmouseout</span>=<span class="string">"document.menu2.src='http://www.blueb.co.kr/SRC/flash/image/thum_06.jpg'"</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.blueb.co.kr/SRC/flash/image/thum_06.jpg"</span> <span class="attr">name</span>=<span class="string">"menu2"</span> <span class="attr">border</span>=<span class="string">"0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span></span></span><br><span class="line"><span class="tag">   <span class="attr">onmouseover</span>=<span class="string">"document.menu1.src='http://www.blueb.co.kr/SRC/flash/image/thum_03.jpg'"</span></span></span><br><span class="line"><span class="tag">   <span class="attr">onmouseout</span>=<span class="string">"document.menu1.src='http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg'"</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg"</span> <span class="attr">name</span>=<span class="string">"menu1"</span> <span class="attr">border</span>=<span class="string">"0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span></span></span><br><span class="line"><span class="tag">   <span class="attr">onmouseover</span>=<span class="string">"document.menu2.src='http://www.blueb.co.kr/SRC/flash/image/thum_01.jpg'"</span></span></span><br><span class="line"><span class="tag">   <span class="attr">onmouseout</span>=<span class="string">"document.menu2.src='http://www.blueb.co.kr/SRC/flash/image/thum_06.jpg'"</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.blueb.co.kr/SRC/flash/image/thum_06.jpg"</span> <span class="attr">name</span>=<span class="string">"menu2"</span> <span class="attr">border</span>=<span class="string">"0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>위와 비슷하지만 위에서 name 속성을 통해 이미지 경로를 지정한것과 달리<br>아래 코드처럼 직접 해당 이미지 src를 직접 지정할 수 있음</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">border</span>=<span class="string">"0"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">onmouseover</span>=<span class="string">"this.src='http://www.blueb.co.kr/SRC/flash/image/thum_03.jpg'"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">onmouseout</span> = <span class="string">"this.src='http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg'"</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br></pre></td></tr></table></figure>
 <hr>
@@ -116,7 +116,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://kajagyu.github.io/blog/2018/06/28/javascript 정리/" data-id="cjjdytc9t0001spz3dgvrv7ik" class="article-share-link">Share</a>
+      <a data-url="https://kajagyu.github.io/blog/2018/06/28/javascript 정리/" data-id="cjjhuz5n70001daz35q8nbg73" class="article-share-link">Share</a>
       
       
     </footer>
@@ -125,11 +125,11 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/2018/06/28/react 정리/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2018/06/28/react 에러 정리/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          react
+          react 에러 정리
         
       </div>
     </a>
@@ -182,11 +182,11 @@
           </li>
         
           <li>
-            <a href="/blog/2018/06/28/react 에러 정리/">react 에러 정리</a>
+            <a href="/blog/2018/06/28/react 정리/">react</a>
           </li>
         
           <li>
-            <a href="/blog/2018/06/28/react 정리/">react</a>
+            <a href="/blog/2018/06/28/react 에러 정리/">react 에러 정리</a>
           </li>
         
           <li>
