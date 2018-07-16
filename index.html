@@ -1,461 +1,1379 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+<meta charset="utf-8">
+<title>Hexo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="https://kajagyu.github.io/blog/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-  
-    <link rel="alternate" href="/blog/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/blog/css/style.css">
+<link rel="alternate" href="/blog/atom.xml" title="Hexo" type="application/atom+xml">
+<link rel="icon" href="/favicon.png">
+<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/blog/css/style.css">
 </head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/blog/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/blog/">Home</a>
-        
-          <a class="main-nav-link" href="/blog/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://kajagyu.github.io/blog"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-기타 정리" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2018/07/03/기타 정리/" class="article-date">
-  <time datetime="2018-07-03T08:28:59.000Z" itemprop="datePublished">2018-07-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/07/03/기타 정리/">기타 정리</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JSON-파일-형식-및-파싱"><a href="#JSON-파일-형식-및-파싱" class="headerlink" title="JSON 파일 형식 및 파싱"></a>JSON 파일 형식 및 파싱</h2><h4 id="JSON-파일-형식"><a href="#JSON-파일-형식" class="headerlink" title="JSON 파일 형식"></a>JSON 파일 형식</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"type"</span>: <span class="string">"Single"</span>,</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"P111 Catcher Mitt 34"</span>,</span><br><span class="line">    <span class="attr">"leather"</span>: <span class="string">"pro"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"type"</span>: <span class="string">"Single"</span>,</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"P102 Infield Glove 11.75"</span>,</span><br><span class="line">    <span class="attr">"leather"</span>: <span class="string">"game day"</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<h4 id="JSON-파일-파싱"><a href="#JSON-파일-파싱" class="headerlink" title="JSON 파일 파싱"></a>JSON 파일 파싱</h4><p>아래와 같이 JSON.stringify() 사용 후 JSON.parse()을 사용한다</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(dummy));</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://kajagyu.github.io/blog/2018/07/03/기타 정리/" data-id="cjjhuz5nb0004daz3l7izcbso" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-html&amp;css정리" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2018/06/29/html&css정리/" class="article-date">
-  <time datetime="2018-06-29T08:45:01.000Z" itemprop="datePublished">2018-06-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/29/html&css정리/">html&amp;css 정리</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="checkbox-사용하기"><a href="#checkbox-사용하기" class="headerlink" title="checkbox 사용하기"></a>checkbox 사용하기</h2><p>checkbox는 아래와 같이 사용함<br>fieldset 태그나 legend 태그는 사용하지 않아도 무방함.<br>실제 checkbox 태그는 div 안의 태그인데 태그에 대한 속성은 아래와 같음<br>type: checkbox 타입 지정<br>id: label의 for 속성과 매치하기 위해 사용<br>name: 해당 checkbox를 나타내는 속성<br>value: checkbox 내의 해당 value를 구분하기 위한 속성(서버에서 해당 속성으로 구분)</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">legend</span>&gt;</span>Choose your interests<span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"coding"</span> <span class="attr">name</span>=<span class="string">"interest"</span> <span class="attr">value</span>=<span class="string">"coding"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"coding"</span>&gt;</span>Coding<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"music"</span> <span class="attr">name</span>=<span class="string">"interest"</span> <span class="attr">value</span>=<span class="string">"music"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"music"</span>&gt;</span>Music<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="text-세로-정렬"><a href="#text-세로-정렬" class="headerlink" title="text 세로 정렬"></a>text 세로 정렬</h2><p>div로 감싸는 text 세로 정렬 시 해당 div의 height와 line-height를 일치 시킨다<br>예를 들어 height가 40px이면 line-height도 40px로 맞춤</p>
-<p>그러나 위와 같은 방법 적용 시 해당 div를 리스트 형식으로 동시에 호출하는 등엔 문제가 발생함.</p>
-<p>그렇기에 그러한 경우엔 아래와 같은 방법을 적용</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">   .div &#123;display:table; width:300px; height:200px;&#125;</span></span><br><span class="line"><span class="undefined">   .p &#123;display:table-cell; text-align:center; vertical-align:middle;&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"p"</span>&gt;</span>Sample Text<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>위의 방법에서 중요한 2가지는 아래와 같음</p>
-<ol>
-<li>텍스트를 감싸는 블록의 height 값이 명확해야 한다.</li>
-<li>부모 앨리먼트(div)의 css 속성을 display:table; 자식 앨리먼트(p)의 css 속성을 display:table-cell; 로 지정해주면 vertical-align 속성이 적용된다.<br>(IE7 이하 버전에서는 display:table, table-cell이 지원되지 않기 때문에 적용되지 않는다.)</li>
-</ol>
-<hr>
-<h2 id="span을-div처럼-활용하기"><a href="#span을-div처럼-활용하기" class="headerlink" title="span을 div처럼 활용하기"></a>span을 div처럼 활용하기</h2><p>span태그는 inline 속성이므로 width, height 지정 불가함.<br>그러나 ‘display: inline-block;’를 지정하면 span 태그를 div 태그와 같이<br>width, height 지정 가능함.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.priority</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: SpoqaHanSans;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: normal;</span><br><span class="line">  <span class="attribute">font-style</span>: normal;</span><br><span class="line">  <span class="attribute">font-stretch</span>: normal;</span><br><span class="line">  <span class="attribute">letter-spacing</span>: normal;</span><br><span class="line">  <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#000000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="div를-브라우저-화면-중앙에-배치하기"><a href="#div를-브라우저-화면-중앙에-배치하기" class="headerlink" title="div를 브라우저(화면) 중앙에 배치하기"></a>div를 브라우저(화면) 중앙에 배치하기</h2><p>사용하고자하는 div (id=intro)가 가로 세로 사이즈가 각각 300, 150 이라고 가정하면..<br>아래와 같이 div 레이어를 좌측 및 상단으로 절반을 밀어낸후, 화면의 50%영역에 배치하면 중앙에 배치된 효과를 얻을 수 있음.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#intro</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: -<span class="number">150px</span> <span class="number">0</span> <span class="number">0</span> -<span class="number">75px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://kajagyu.github.io/blog/2018/06/29/html&css정리/" data-id="cjjhuz5n90002daz3yt6ft6gw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="react-react 정리" class="article article-type-react" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2018/06/28/react 정리/" class="article-date">
-  <time datetime="2018-06-28T09:54:26.000Z" itemprop="datePublished">2018-06-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/28/react 정리/">react</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Object에서-map-사용하기"><a href="#Object에서-map-사용하기" class="headerlink" title="Object에서 map 사용하기"></a>Object에서 map 사용하기</h2><p>Object는 key와 value가 있으므로 map 사용 후 map에서 반환하는 임의의 key와 index를 이용해 map을 사용한다<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> list = data.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">      &lt;div key=&#123;index&#125;&gt;</span><br><span class="line">        &lt;div&gt;&#123;item.name&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div&gt;&#123;item.phone&#125;&lt;/</span>div&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    ))</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="부모-component에서-자식-component의-state-값-올려받기"><a href="#부모-component에서-자식-component의-state-값-올려받기" class="headerlink" title="부모 component에서 자식 component의 state 값 올려받기"></a>부모 component에서 자식 component의 state 값 올려받기</h2><p>자식 component에서 부모 component의 데이터는 this.props를 통해 접근 가능함<br>이와 반대의 경우는 아래의 코드와 같이 부모 component의 JSX 태그 속성값을 this.props를 통해 접근하고<br>부모 component에서 정의한 함수와 매핑하여 해당 함수에 자식 component 데이터의 파라미터 전달을 통해<br>부모 component에서 자식 component의 데이터를 받아 올 수 있다</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 부모 component</span></span><br><span class="line">handleCreate = <span class="function">(<span class="params">data</span>) =&gt;</span> &#123; <span class="comment">// data라는 파라미터로 자식 component 데이터 받음</span></span><br><span class="line">  <span class="keyword">const</span> &#123; information &#125; = <span class="keyword">this</span>.state</span><br><span class="line"></span><br><span class="line">  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    information: information.concat(&#123;<span class="attr">id</span>: <span class="keyword">this</span>.id++, ...data&#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; information &#125; = <span class="keyword">this</span>.state</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;PhoneForm onCreate=&#123;<span class="keyword">this</span>.handleCreate&#125; /&gt; <span class="comment">// handleCreate 함수 매핑</span></span><br><span class="line">      &lt;PhoneList data=&#123;information&#125; /&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">  <span class="keyword">super</span>(props)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">this</span>.state = &#123;</span><br><span class="line">    name: <span class="string">''</span>,</span><br><span class="line">    phone: <span class="string">''</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">handleSubmit = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  e.preventDefault()</span><br><span class="line">  <span class="keyword">this</span>.props.onCreate(<span class="keyword">this</span>.state) <span class="comment">// 부모 component로 this.state 데이터 전달</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">return</span>(</span><br><span class="line">    &lt;form onSubmit=&#123;<span class="keyword">this</span>.handleSubmit&#125;&gt;</span><br><span class="line">      &lt;input type=<span class="string">"text"</span></span><br><span class="line">             placeholder=<span class="string">"NameBox"</span></span><br><span class="line">             name=<span class="string">"name"</span></span><br><span class="line">             value=&#123;<span class="keyword">this</span>.state.name&#125;</span><br><span class="line">             onChange=&#123;<span class="keyword">this</span>.handleChange&#125;</span><br><span class="line">      /&gt;</span><br><span class="line">      &lt;button type=<span class="string">"submit"</span>&gt;submit button&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>form&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="image-파일-업로드-및-파일-정보-가져오기"><a href="#image-파일-업로드-및-파일-정보-가져오기" class="headerlink" title="image 파일 업로드 및 파일 정보 가져오기"></a>image 파일 업로드 및 파일 정보 가져오기</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">  <span class="keyword">super</span>(props)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">this</span>.state = &#123;</span><br><span class="line">    file: <span class="literal">null</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fileLoad = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e.target.files[<span class="number">0</span>]) <span class="comment">// 업로드 이미지 파일</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> img = <span class="keyword">new</span> Image()</span><br><span class="line">  img.src = URL.createObjectURL(e.target.files[<span class="number">0</span>]) <span class="comment">// img 객체에 이미지 url 정보 입력</span></span><br><span class="line"></span><br><span class="line">  img.onload = <span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="comment">// 이미지 업로드 시 이미지 width, height 정보 출력</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'width, height'</span>, img.naturalWidth, img.naturalHeight)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    file: URL.createObjectURL(e.target.files[<span class="number">0</span>]) <span class="comment">// 이미지 파일 경로 변수에 저장</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">return</span>(</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      NEW BANNER</span><br><span class="line">      &lt;div className=<span class="string">"bannerImg"</span>&gt;</span><br><span class="line">        &lt;img src=&#123;<span class="keyword">this</span>.state.file&#125;/&gt; <span class="comment">// 이미지 출력</span></span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">      &lt;input type="file" id="uploadImg" onChange=&#123;this.fileLoad&#125; hidden/</span>&gt;</span><br><span class="line">      &lt;Button type=<span class="string">"photo"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"uploadImg"</span>&gt;</span>PHOTO<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span></span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="JSX-태그-내에-javascript-코드와-문자열-혼용하여-사용하기"><a href="#JSX-태그-내에-javascript-코드와-문자열-혼용하여-사용하기" class="headerlink" title="JSX 태그 내에 javascript 코드와 문자열 혼용하여 사용하기"></a>JSX 태그 내에 javascript 코드와 문자열 혼용하여 사용하기</h2><p>아래의 className 속성을 참조하면 javascript 코드는 기존과 같이 {} 괄호안에 사용하고<br>javascript 소스 내에서 ‘’ 안에 JSX태그 내에서 사용하고자하는 문자열을 넣는다</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=<span class="string">"button"</span> className=&#123;<span class="keyword">this</span>.state.onOff === <span class="literal">true</span> ? <span class="string">'btnOn'</span> : <span class="string">'btnOff'</span>&#125;&gt;</span><br><span class="line">  ON</span><br><span class="line">&lt;<span class="regexp">/button&gt;</span></span><br></pre></td></tr></table></figure>
-<hr>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://kajagyu.github.io/blog/2018/06/28/react 정리/" data-id="cjjhuz5na0003daz3w4ctt3eg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-react 에러 정리" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2018/06/28/react 에러 정리/" class="article-date">
-  <time datetime="2018-06-28T09:54:26.000Z" itemprop="datePublished">2018-06-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/28/react 에러 정리/">react 에러 정리</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="expected-this-to-be-used-by-class-method…"><a href="#expected-this-to-be-used-by-class-method…" class="headerlink" title="expected this to be used by class method…"></a>expected this to be used by class method…</h2><p>에러 문구:<br><code>expected this to be used by class method</code></p>
-<p>클래스 메소드에서 this를 사용하지 않을때 발생<br>-&gt; this 키워드를 사용하여 해결(생성자에서 this.state data를 초기화 하는 등…)</p>
-<hr>
-<h2 id="Objects-are-not-valid-as-a-React-child"><a href="#Objects-are-not-valid-as-a-React-child" class="headerlink" title="Objects are not valid as a React child.."></a>Objects are not valid as a React child..</h2><p>에러문구:<br><code>Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.</code></p>
-<p>rendering 시에 array 형 데이터를 올바르게 파싱하지 않을때 발생<br>-&gt; render 메소드를 확인하여 array형 데이터를 map을 이용하는 등으로 파싱을 올바르게 하여 출력할것</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://kajagyu.github.io/blog/2018/06/28/react 에러 정리/" data-id="cjjhuz5nc0005daz3oh8szyga" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-javascript 정리" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2018/06/28/javascript 정리/" class="article-date">
-  <time datetime="2018-06-28T09:46:23.000Z" itemprop="datePublished">2018-06-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/28/javascript 정리/">javascript 정리</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="URL-경로-파싱하기"><a href="#URL-경로-파싱하기" class="headerlink" title="URL 경로 파싱하기"></a>URL 경로 파싱하기</h2><p>URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용<br>아래의 예에 대한 설명을 다음과 같음<br><code>window.location.pathname</code><br>-&gt; URL 경로 가져옴<br><code>window.location.pathname.split(&#39;/&#39;)</code><br>-&gt; URL 경로를 / 로 split하여 배열 데이터로 초기화<br><code>pathName[pathName.length - 1]</code><br>-&gt; 배열 데이터에 들어있는 URL 경로에서 맨 마지막 경로명을 가져와서 초기화</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pathName = <span class="built_in">window</span>.location.pathname.split(<span class="string">'/'</span>);</span><br><span class="line"><span class="keyword">var</span> lastUrlName = pathName[pathName.length - <span class="number">1</span>];</span><br></pre></td></tr></table></figure>
-<p>위와 마찬가지로 URL 경로를 가져오지만 window 객체를 이용하는것이 아닌 dom을 이용해<br>같은 결과를 얻고자 한다면 아래와 같이 코딩함</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'document.URL'</span>, <span class="built_in">document</span>.URL);</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="confirm-창-띄운-후-확인-취소-클릭에-따른-분기처리-하기"><a href="#confirm-창-띄운-후-확인-취소-클릭에-따른-분기처리-하기" class="headerlink" title="confirm 창 띄운 후 확인/취소 클릭에 따른 분기처리 하기"></a>confirm 창 띄운 후 확인/취소 클릭에 따른 분기처리 하기</h2><p>confirm 창은 보통 alert창과 같이 <code>confirm(&#39;&#39;)</code> 으로 호출하지만<br>confirm 창을 띄운 후 확인, 취소 버튼에 따른 분기처리는 아래 코드와 같이 하도록 함</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">confirmPop</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(confirm(<span class="string">'confirm yes or no'</span>)==<span class="literal">true</span>) &#123;</span><br><span class="line">    location=<span class="string">'https://www.google.com'</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    alert(<span class="string">'cancel click'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="자바스크립트-에러인지-감지하는-함수"><a href="#자바스크립트-에러인지-감지하는-함수" class="headerlink" title="자바스크립트 에러인지 감지하는 함수"></a>자바스크립트 에러인지 감지하는 함수</h2><p>자바스크립트 내에 에러가 발생한다면 에러를 감지하는 window 객체 메소드가 있음<br>그 코드는 아래와 같음</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">blockError</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>; <span class="comment">// return true로 할 시 에러를 발생시키지 않습니다</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">window</span>.onerror = blockError; <span class="comment">// window.onerror 함수를 통해 에러를 감지합니다</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">  e /</span><span class="regexp">/ 에러를 유발하는 코드입니다</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="마우스오버-마우스아웃"><a href="#마우스오버-마우스아웃" class="headerlink" title="마우스오버, 마우스아웃"></a>마우스오버, 마우스아웃</h2><p>해당영역에 마우스가 올라가면 마우스 오버, 해당 영역 밖에 마우스가 위치하면 마우스 아웃.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span></span></span><br><span class="line"><span class="tag">   <span class="attr">onmouseover</span>=<span class="string">"document.menu1.src='http://www.blueb.co.kr/SRC/flash/image/thum_03.jpg'"</span></span></span><br><span class="line"><span class="tag">   <span class="attr">onmouseout</span>=<span class="string">"document.menu1.src='http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg'"</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg"</span> <span class="attr">name</span>=<span class="string">"menu1"</span> <span class="attr">border</span>=<span class="string">"0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span></span></span><br><span class="line"><span class="tag">   <span class="attr">onmouseover</span>=<span class="string">"document.menu2.src='http://www.blueb.co.kr/SRC/flash/image/thum_01.jpg'"</span></span></span><br><span class="line"><span class="tag">   <span class="attr">onmouseout</span>=<span class="string">"document.menu2.src='http://www.blueb.co.kr/SRC/flash/image/thum_06.jpg'"</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.blueb.co.kr/SRC/flash/image/thum_06.jpg"</span> <span class="attr">name</span>=<span class="string">"menu2"</span> <span class="attr">border</span>=<span class="string">"0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>위와 비슷하지만 위에서 name 속성을 통해 이미지 경로를 지정한것과 달리<br>아래 코드처럼 직접 해당 이미지 src를 직접 지정할 수 있음</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">border</span>=<span class="string">"0"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">onmouseover</span>=<span class="string">"this.src='http://www.blueb.co.kr/SRC/flash/image/thum_03.jpg'"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">onmouseout</span> = <span class="string">"this.src='http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg'"</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="페이지-로드-후-함수-호출하기"><a href="#페이지-로드-후-함수-호출하기" class="headerlink" title="페이지 로드 후 함수 호출하기"></a>페이지 로드 후 함수 호출하기</h2><p>body 태그 안의 onload 속성으로 인하여 페이지 로드 후 이벤트 발생.<br>setTimeout 함수의 두번째 인자로 경과 시간 후 첫번째 인자의 이벤트 발생.<br>setTimeout은 window 객체의 메소드임</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">BODY</span> <span class="attr">onLoad</span>=<span class="string">"setTimeout('startAlert()',3000)"</span>&gt;</span></span><br><span class="line">3초후 경고창이 실행됩니다. (1000 = 1초)</span><br><span class="line"><span class="tag">&lt;/<span class="name">BODY</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="input-box-text-area를-클릭-시-안의-텍스트를-한번에-포커싱하기"><a href="#input-box-text-area를-클릭-시-안의-텍스트를-한번에-포커싱하기" class="headerlink" title="input box, text area를 클릭 시 안의 텍스트를 한번에 포커싱하기"></a>input box, text area를 클릭 시 안의 텍스트를 한번에 포커싱하기</h2><p>input box, text area 등을 클릭하였을때<br>해당 영역 내의 텍스트를 한꺼번에 포커싱하게 함</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span>=<span class="string">"input box를 클릭하세요"</span> <span class="attr">onfocus</span>=<span class="string">"this.select()"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="키보드-shift-키가-눌렸는지-확인하기"><a href="#키보드-shift-키가-눌렸는지-확인하기" class="headerlink" title="키보드 shift 키가 눌렸는지 확인하기"></a>키보드 shift 키가 눌렸는지 확인하기</h2><p>아래 코드와 같이 특정 키보드 키가 눌린 이벤트에 대해 체크. 아래는 shift 키가 눌렸는지 확인하는 코드</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">isKeyPressed</span>(<span class="params">event</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">if</span> (event.shiftKey==<span class="number">1</span>)&#123;</span></span><br><span class="line"><span class="javascript">    alert(<span class="string">"쉬프트키 살살 좀 누르세요!"</span>)</span></span><br><span class="line"><span class="javascript">  &#125;<span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="javascript">    alert(<span class="string">"쉬프트키 안누르셨어요...키보드 아까우세요?"</span>)</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">onclick</span>=<span class="string">"isKeyPressed(event); return false;"</span>&gt;</span>클릭해보세요..<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="오늘-날짜-추출"><a href="#오늘-날짜-추출" class="headerlink" title="오늘 날짜 추출"></a>오늘 날짜 추출</h2><p>Date() 객체를 이용하여 오늘 날짜 추출하기</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> currentTime = <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line"><span class="keyword">var</span> month = currentTime.getMonth() + <span class="number">1</span></span><br><span class="line"><span class="keyword">var</span> day = currentTime.getDate()</span><br><span class="line"><span class="keyword">var</span> year = currentTime.getFullYear()</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.write(year + <span class="string">"년"</span> + month + <span class="string">"월"</span> + day + <span class="string">"일"</span>)</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="클릭이벤트를-이용해서-html-태그에-직접-접근-document-getElementById-이용"><a href="#클릭이벤트를-이용해서-html-태그에-직접-접근-document-getElementById-이용" class="headerlink" title="클릭이벤트를 이용해서 html 태그에 직접 접근(document.getElementById() 이용)"></a>클릭이벤트를 이용해서 html 태그에 직접 접근(document.getElementById() 이용)</h2><p>아래 코딩 예제를 통해 배울 수 있는 것</p>
-<ol>
-<li>onclick 이벤트 시 자바스크립트를 호출하는 방법에 대해 숙지할것</li>
-<li><code>javascript:void(0)</code> 코드를 이용하여 href 속성을 무효화 할 수 있음</li>
-<li>a 태그에 href를 안주어도 onclick 이벤트를 통해 클릭 이벤트 적용 가능</li>
-<li><code>document.getElementById()</code>를 이용해 해당 태그의 각 속성에 직접 접근 가능<br>(<code>console.log(document.getElementById())</code>를 통해 확인해 볼 것)</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  .black_overlay&#123;</span></span><br><span class="line"><span class="undefined">      display: none;</span></span><br><span class="line"><span class="undefined">      position: absolute;</span></span><br><span class="line"><span class="undefined">      top: 0%;</span></span><br><span class="line"><span class="undefined">      left: 0%;</span></span><br><span class="line"><span class="undefined">      width: 100%;</span></span><br><span class="line"><span class="undefined">      height: 1500px;</span></span><br><span class="line"><span class="undefined">      background-color: black;</span></span><br><span class="line"><span class="undefined">      z-index:1001;</span></span><br><span class="line"><span class="undefined">      -moz-opacity: 0.8;</span></span><br><span class="line"><span class="undefined">      opacity:.80;</span></span><br><span class="line"><span class="undefined">      filter: alpha(opacity=80);</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .white_content &#123;</span></span><br><span class="line"><span class="undefined">      display: none;</span></span><br><span class="line"><span class="undefined">      position: absolute;</span></span><br><span class="line"><span class="undefined">      top: 25%;</span></span><br><span class="line"><span class="undefined">      left: 25%;</span></span><br><span class="line"><span class="undefined">      width: 50%;</span></span><br><span class="line"><span class="undefined">      height: 50%;</span></span><br><span class="line"><span class="undefined">      padding: 16px;</span></span><br><span class="line"><span class="undefined">      border: 16px solid orange;</span></span><br><span class="line"><span class="undefined">      background-color: white;</span></span><br><span class="line"><span class="undefined">      z-index:1002;</span></span><br><span class="line"><span class="undefined">      overflow: auto;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">clickEvent</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(<span class="built_in">document</span>.getElementById(<span class="string">'light'</span>))</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.getElementById(<span class="string">'light'</span>).style.display=<span class="string">'block'</span>;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.getElementById(<span class="string">'fade'</span>).style.display=<span class="string">'block'</span></span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">closeEvent</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.getElementById(<span class="string">'light'</span>).style.display=<span class="string">'none'</span>;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.getElementById(<span class="string">'fade'</span>).style.display=<span class="string">'none'</span></span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:void(0)"</span> <span class="attr">onclick</span>=<span class="string">"clickEvent()"</span>&gt;</span>효과보기<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"light"</span> <span class="attr">class</span>=<span class="string">"white_content"</span>&gt;</span></span><br><span class="line">    내용을 입력하세요^^</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">onclick</span>=<span class="string">"closeEvent()"</span>&gt;</span>닫기<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"fade"</span> <span class="attr">class</span>=<span class="string">"black_overlay"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="클릭이벤트를-이용해서-html-태그에-직접-접근-innerHTML-이용"><a href="#클릭이벤트를-이용해서-html-태그에-직접-접근-innerHTML-이용" class="headerlink" title="클릭이벤트를 이용해서 html 태그에 직접 접근(innerHTML 이용)"></a>클릭이벤트를 이용해서 html 태그에 직접 접근(innerHTML 이용)</h2><p>아래 코딩 예제를 통해 배울 수 있는 것</p>
-<ol>
-<li>태그의 id 속성을 이용하여 innerHTML로 해당 태그에 접근 및 html 태그 변경 가능</li>
-<li>상위 태그를 innerHTML로 insert하면 그 상위 태그의 하위 태그도 영향받아 해당 상위 태그영역을 덮어씀</li>
-<li>this 키워드를 이용하여 해당 html 페이지를 지정함</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">ps</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">if</span> (<span class="keyword">this</span>.forms.password.type=<span class="string">"password"</span>) &#123;</span></span><br><span class="line"><span class="xml">    box.innerHTML="<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">\</span>"<span class="attr">html</span>\" <span class="attr">name</span>=<span class="string">\</span>"<span class="attr">password</span>\" <span class="attr">size</span>=<span class="string">\</span>"<span class="attr">20</span>\" <span class="attr">value</span>=<span class="string">"+this.forms.password.value+"</span>&gt;</span>";</span></span><br><span class="line"><span class="xml">    click.innerHTML="<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">\</span>"<span class="attr">javascript:txt</span>()\"&gt;</span>숨기기<span class="tag">&lt;/<span class="name">a</span>&gt;</span>"</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">txt</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">if</span> (<span class="keyword">this</span>.forms.password.type=<span class="string">"text"</span>) &#123;</span></span><br><span class="line"><span class="xml">    box.innerHTML="<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">\</span>"<span class="attr">password</span>\" <span class="attr">name</span>=<span class="string">\</span>"<span class="attr">password</span>\" <span class="attr">size</span>=<span class="string">\</span>"<span class="attr">20</span>\" <span class="attr">value</span>=<span class="string">"+this.forms.password.value+"</span>&gt;</span>";</span></span><br><span class="line"><span class="xml">    click.innerHTML="<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">\</span>"<span class="attr">javascript:ps</span>()\"&gt;</span>보기<span class="tag">&lt;/<span class="name">a</span>&gt;</span>"</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"POST"</span> <span class="attr">action</span>=<span class="string">"addcheck.asp"</span> <span class="attr">name</span>=<span class="string">"forms"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">box</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">size</span>=<span class="string">"20"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">click</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:ps()"</span>&gt;</span>보기<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="document-getElementById-innerHTML-사용-예제"><a href="#document-getElementById-innerHTML-사용-예제" class="headerlink" title="document.getElementById().innerHTML 사용 예제"></a>document.getElementById().innerHTML 사용 예제</h2><p><code>document.getElementById().innerHTML</code>의 사용 예제를 확인해보자</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="string">"변경완료!!"</span>;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span>이곳의 텍스트를 변경<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"myFunction()"</span>&gt;</span>클릭<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://kajagyu.github.io/blog/2018/06/28/javascript 정리/" data-id="cjjhuz5n70001daz35q8nbg73" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2018/06/28/hello-world/" class="article-date">
-  <time datetime="2018-06-28T09:29:07.039Z" itemprop="datePublished">2018-06-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://kajagyu.github.io/blog/2018/06/28/hello-world/" data-id="cjjhuz5n40000daz3fdgr3e8g" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/06/">June 2018</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/blog/2018/07/03/기타 정리/">기타 정리</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2018/06/29/html&css정리/">html&amp;css 정리</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2018/06/28/react 정리/">react</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2018/06/28/react 에러 정리/">react 에러 정리</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2018/06/28/javascript 정리/">javascript 정리</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/blog/" class="mobile-nav-link">Home</a>
-  
-    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/blog/js/script.js"></script>
-
-
-
-  </div>
+<div id="container">
+	<div id="wrap">
+		<header id="header">
+		<div id="banner">
+		</div>
+		<div id="header-outer" class="outer">
+			<div id="header-title" class="inner">
+				<h1 id="logo-wrap">
+				<a href="/blog/" id="logo">Hexo</a>
+				</h1>
+			</div>
+			<div id="header-inner" class="inner">
+				<nav id="main-nav">
+				<a id="main-nav-toggle" class="nav-icon"></a>
+				<a class="main-nav-link" href="/blog/">Home</a>
+				<a class="main-nav-link" href="/blog/archives">Archives</a>
+				</nav>
+				<nav id="sub-nav">
+				<a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+				<a id="nav-search-btn" class="nav-icon" title="Search"></a>
+				</nav>
+				<div id="search-form-wrap">
+					<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+						<input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://kajagyu.github.io/blog">
+					</form>
+				</div>
+			</div>
+		</div>
+		</header>
+		<div class="outer">
+			<section id="main">
+			<article id="post-기타 정리" class="article article-type-post" itemscope itemprop="blogPost">
+			<div class="article-meta">
+				<a href="/blog/2018/07/03/기타 정리/" class="article-date">
+				<time datetime="2018-07-03T08:28:59.000Z" itemprop="datePublished">2018-07-03</time>
+				</a>
+			</div>
+			<div class="article-inner">
+				<header class="article-header">
+				<h1 itemprop="name">
+				<a class="article-title" href="/blog/2018/07/03/기타 정리/">기타 정리</a>
+				</h1>
+				</header>
+				<div class="article-entry" itemprop="articleBody">
+					<h2 id="JSON-파일-형식-및-파싱"><a href="#JSON-파일-형식-및-파싱" class="headerlink" title="JSON 파일 형식 및 파싱"></a>JSON 파일 형식 및 파싱</h2>
+					<h4 id="JSON-파일-형식"><a href="#JSON-파일-형식" class="headerlink" title="JSON 파일 형식"></a>JSON 파일 형식</h4>
+					<figure class="highlight json">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+								<span class="line">9</span><br>
+								<span class="line">10</span><br>
+								<span class="line">11</span><br>
+								<span class="line">12</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line">[</span><br>
+								<span class="line"> &#123;</span><br>
+								<span class="line"><span class="attr">"type"</span>: <span class="string">"Single"</span>,</span><br>
+								<span class="line"><span class="attr">"name"</span>: <span class="string">"P111 Catcher Mitt 34"</span>,</span><br>
+								<span class="line"><span class="attr">"leather"</span>: <span class="string">"pro"</span></span><br>
+								<span class="line"> &#125;,</span><br>
+								<span class="line"> &#123;</span><br>
+								<span class="line"><span class="attr">"type"</span>: <span class="string">"Single"</span>,</span><br>
+								<span class="line"><span class="attr">"name"</span>: <span class="string">"P102 Infield Glove 11.75"</span>,</span><br>
+								<span class="line"><span class="attr">"leather"</span>: <span class="string">"game day"</span></span><br>
+								<span class="line"> &#125;</span><br>
+								<span class="line">]</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<h4 id="JSON-파일-파싱"><a href="#JSON-파일-파싱" class="headerlink" title="JSON 파일 파싱"></a>JSON 파일 파싱</h4>
+					<p>
+						아래와 같이 JSON.stringify() 사용 후 JSON.parse()을 사용한다
+					</p>
+					<figure class="highlight javascript">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(dummy));</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+				</div>
+				<footer class="article-footer">
+				<a data-url="https://kajagyu.github.io/blog/2018/07/03/기타 정리/" data-id="cjjhuz5nb0004daz3l7izcbso" class="article-share-link">Share</a>
+				</footer>
+			</div>
+			</article>
+			<article id="post-html&amp;css정리" class="article article-type-post" itemscope itemprop="blogPost">
+			<div class="article-meta">
+				<a href="/blog/2018/06/29/html&css정리/" class="article-date">
+				<time datetime="2018-06-29T08:45:01.000Z" itemprop="datePublished">2018-06-29</time>
+				</a>
+			</div>
+			<div class="article-inner">
+				<header class="article-header">
+				<h1 itemprop="name">
+				<a class="article-title" href="/blog/2018/06/29/html&css정리/">html&amp;css 정리</a>
+				</h1>
+				</header>
+				<div class="article-entry" itemprop="articleBody">
+					<h2 id="checkbox-사용하기"><a href="#checkbox-사용하기" class="headerlink" title="checkbox 사용하기"></a>checkbox 사용하기</h2>
+					<p>
+						checkbox는 아래와 같이 사용함<br>
+						fieldset 태그나 legend 태그는 사용하지 않아도 무방함.<br>
+						실제 checkbox 태그는 div 안의 태그인데 태그에 대한 속성은 아래와 같음<br>
+						type: checkbox 타입 지정<br>
+						id: label의 for 속성과 매치하기 위해 사용<br>
+						name: 해당 checkbox를 나타내는 속성<br>
+						value: checkbox 내의 해당 value를 구분하기 위한 속성(서버에서 해당 속성으로 구분)
+					</p>
+					<figure class="highlight html">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+								<span class="line">9</span><br>
+								<span class="line">10</span><br>
+								<span class="line">11</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">legend</span>&gt;</span>Choose your interests<span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">input</span><span class="attr">type</span>=<span class="string">"checkbox"</span><span class="attr">id</span>=<span class="string">"coding"</span><span class="attr">name</span>=<span class="string">"interest"</span><span class="attr">value</span>=<span class="string">"coding"</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">label</span><span class="attr">for</span>=<span class="string">"coding"</span>&gt;</span>Coding<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">input</span><span class="attr">type</span>=<span class="string">"checkbox"</span><span class="attr">id</span>=<span class="string">"music"</span><span class="attr">name</span>=<span class="string">"interest"</span><span class="attr">value</span>=<span class="string">"music"</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">label</span><span class="attr">for</span>=<span class="string">"music"</span>&gt;</span>Music<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+					<h2 id="text-세로-정렬"><a href="#text-세로-정렬" class="headerlink" title="text 세로 정렬"></a>text 세로 정렬</h2>
+					<p>
+						div로 감싸는 text 세로 정렬 시 해당 div의 height와 line-height를 일치 시킨다<br>
+						예를 들어 height가 40px이면 line-height도 40px로 맞춤
+					</p>
+					<p>
+						그러나 위와 같은 방법 적용 시 해당 div를 리스트 형식으로 동시에 호출하는 등엔 문제가 발생함.
+					</p>
+					<p>
+						그렇기에 그러한 경우엔 아래와 같은 방법을 적용
+					</p>
+					<figure class="highlight html">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="tag">&lt;<span class="name">style</span><span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br>
+								<span class="line"><span class="undefined"> .div &#123;display:table; width:300px; height:200px;&#125;</span></span><br>
+								<span class="line"><span class="undefined"> .p &#123;display:table-cell; text-align:center; vertical-align:middle;&#125;</span></span><br>
+								<span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br>
+								<span class="line"></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">div</span><span class="attr">class</span>=<span class="string">"div"</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">p</span><span class="attr">class</span>=<span class="string">"p"</span>&gt;</span>Sample Text<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<p>
+						위의 방법에서 중요한 2가지는 아래와 같음
+					</p>
+					<ol>
+						<li>텍스트를 감싸는 블록의 height 값이 명확해야 한다.</li>
+						<li>부모 앨리먼트(div)의 css 속성을 display:table; 자식 앨리먼트(p)의 css 속성을 display:table-cell; 로 지정해주면 vertical-align 속성이 적용된다.<br>
+						(IE7 이하 버전에서는 display:table, table-cell이 지원되지 않기 때문에 적용되지 않는다.)</li>
+					</ol>
+					<hr>
+					<h2 id="span을-div처럼-활용하기"><a href="#span을-div처럼-활용하기" class="headerlink" title="span을 div처럼 활용하기"></a>span을 div처럼 활용하기</h2>
+					<p>
+						span태그는 inline 속성이므로 width, height 지정 불가함.<br>
+						그러나 ‘display: inline-block;’를 지정하면 span 태그를 div 태그와 같이<br>
+						width, height 지정 가능함.
+					</p>
+					<figure class="highlight css">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+								<span class="line">9</span><br>
+								<span class="line">10</span><br>
+								<span class="line">11</span><br>
+								<span class="line">12</span><br>
+								<span class="line">13</span><br>
+								<span class="line">14</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="selector-class">.priority</span> &#123;</span><br>
+								<span class="line"><span class="attribute">display</span>: inline-block;</span><br>
+								<span class="line"><span class="attribute">width</span>: <span class="number">100px</span>;</span><br>
+								<span class="line"><span class="attribute">height</span>: <span class="number">40px</span>;</span><br>
+								<span class="line"><span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br>
+								<span class="line"><span class="attribute">font-family</span>: SpoqaHanSans;</span><br>
+								<span class="line"><span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br>
+								<span class="line"><span class="attribute">font-weight</span>: normal;</span><br>
+								<span class="line"><span class="attribute">font-style</span>: normal;</span><br>
+								<span class="line"><span class="attribute">font-stretch</span>: normal;</span><br>
+								<span class="line"><span class="attribute">letter-spacing</span>: normal;</span><br>
+								<span class="line"><span class="attribute">vertical-align</span>: middle;</span><br>
+								<span class="line"><span class="attribute">color</span>: <span class="number">#000000</span>;</span><br>
+								<span class="line">&#125;</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+					<h2 id="div를-브라우저-화면-중앙에-배치하기"><a href="#div를-브라우저-화면-중앙에-배치하기" class="headerlink" title="div를 브라우저(화면) 중앙에 배치하기"></a>div를 브라우저(화면) 중앙에 배치하기</h2>
+					<p>
+						사용하고자하는 div (id=intro)가 가로 세로 사이즈가 각각 300, 150 이라고 가정하면..<br>
+						아래와 같이 div 레이어를 좌측 및 상단으로 절반을 밀어낸후, 화면의 50%영역에 배치하면 중앙에 배치된 효과를 얻을 수 있음.
+					</p>
+					<figure class="highlight css">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="selector-id">#intro</span> &#123;</span><br>
+								<span class="line"><span class="attribute">position</span>: absolute;</span><br>
+								<span class="line"><span class="attribute">width</span>: <span class="number">300px</span>;</span><br>
+								<span class="line"><span class="attribute">height</span>: <span class="number">150px</span>;</span><br>
+								<span class="line"><span class="attribute">margin</span>: -<span class="number">150px</span><span class="number">0</span><span class="number">0</span> -<span class="number">75px</span>;</span><br>
+								<span class="line"><span class="attribute">top</span>: <span class="number">50%</span>;</span><br>
+								<span class="line"><span class="attribute">left</span>: <span class="number">50%</span>;</span><br>
+								<span class="line">&#125;</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+				</div>
+				<footer class="article-footer">
+				<a data-url="https://kajagyu.github.io/blog/2018/06/29/html&css정리/" data-id="cjjhuz5n90002daz3yt6ft6gw" class="article-share-link">Share</a>
+				</footer>
+			</div>
+			</article>
+			<article id="react-react 정리" class="article article-type-react" itemscope itemprop="blogPost">
+			<div class="article-meta">
+				<a href="/blog/2018/06/28/react 정리/" class="article-date">
+				<time datetime="2018-06-28T09:54:26.000Z" itemprop="datePublished">2018-06-28</time>
+				</a>
+			</div>
+			<div class="article-inner">
+				<header class="article-header">
+				<h1 itemprop="name">
+				<a class="article-title" href="/blog/2018/06/28/react 정리/">react</a>
+				</h1>
+				</header>
+				<div class="article-entry" itemprop="articleBody">
+					<h2 id="Object에서-map-사용하기"><a href="#Object에서-map-사용하기" class="headerlink" title="Object에서 map 사용하기"></a>Object에서 map 사용하기</h2>
+					<p>
+						Object는 key와 value가 있으므로 map 사용 후 map에서 반환하는 임의의 key와 index를 이용해 map을 사용한다<br>
+						<figure class="highlight javascript">
+						<table>
+						<tr>
+							<td class="gutter">
+								<pre>
+									<span class="line">1</span><br>
+									<span class="line">2</span><br>
+									<span class="line">3</span><br>
+									<span class="line">4</span><br>
+									<span class="line">5</span><br>
+									<span class="line">6</span><br>
+								</pre>
+							</td>
+							<td class="code">
+								<pre>
+									<span class="line"><span class="keyword">const</span> list = data.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br>
+									<span class="line"> &lt;div key=&#123;index&#125;&gt;</span><br>
+									<span class="line"> &lt;div&gt;&#123;item.name&#125;&lt;<span class="regexp">/div&gt;</span></span><br>
+									<span class="line"><span class="regexp"> &lt;div&gt;&#123;item.phone&#125;&lt;/</span>div&gt;</span><br>
+									<span class="line"> &lt;<span class="regexp">/div&gt;</span></span><br>
+									<span class="line"><span class="regexp"> ))</span></span><br>
+								</pre>
+							</td>
+						</tr>
+						</table>
+						</figure>
+					</p>
+					<h2 id="부모-component에서-자식-component의-state-값-올려받기"><a href="#부모-component에서-자식-component의-state-값-올려받기" class="headerlink" title="부모 component에서 자식 component의 state 값 올려받기"></a>부모 component에서 자식 component의 state 값 올려받기</h2>
+					<p>
+						자식 component에서 부모 component의 데이터는 this.props를 통해 접근 가능함<br>
+						이와 반대의 경우는 아래의 코드와 같이 부모 component의 JSX 태그 속성값을 this.props를 통해 접근하고<br>
+						부모 component에서 정의한 함수와 매핑하여 해당 함수에 자식 component 데이터의 파라미터 전달을 통해<br>
+						부모 component에서 자식 component의 데이터를 받아 올 수 있다
+					</p>
+					<figure class="highlight javascript">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+								<span class="line">9</span><br>
+								<span class="line">10</span><br>
+								<span class="line">11</span><br>
+								<span class="line">12</span><br>
+								<span class="line">13</span><br>
+								<span class="line">14</span><br>
+								<span class="line">15</span><br>
+								<span class="line">16</span><br>
+								<span class="line">17</span><br>
+								<span class="line">18</span><br>
+								<span class="line">19</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="comment">// 부모 component</span></span><br>
+								<span class="line">handleCreate = <span class="function">(<span class="params">data</span>) =&gt;</span> &#123; <span class="comment">// data라는 파라미터로 자식 component 데이터 받음</span></span><br>
+								<span class="line"><span class="keyword">const</span> &#123; information &#125; = <span class="keyword">this</span>.state</span><br>
+								<span class="line"></span><br>
+								<span class="line"><span class="keyword">this</span>.setState(&#123;</span><br>
+								<span class="line"> information: information.concat(&#123;<span class="attr">id</span>: <span class="keyword">this</span>.id++, ...data&#125;)</span><br>
+								<span class="line"> &#125;)</span><br>
+								<span class="line">&#125;</span><br>
+								<span class="line"></span><br>
+								<span class="line">render() &#123;</span><br>
+								<span class="line"><span class="keyword">const</span> &#123; information &#125; = <span class="keyword">this</span>.state</span><br>
+								<span class="line"></span><br>
+								<span class="line"><span class="keyword">return</span> (</span><br>
+								<span class="line"> &lt;div&gt;</span><br>
+								<span class="line"> &lt;PhoneForm onCreate=&#123;<span class="keyword">this</span>.handleCreate&#125; /&gt; <span class="comment">// handleCreate 함수 매핑</span></span><br>
+								<span class="line"> &lt;PhoneList data=&#123;information&#125; /&gt;</span><br>
+								<span class="line"> &lt;<span class="regexp">/div&gt;</span></span><br>
+								<span class="line"><span class="regexp"> )</span></span><br>
+								<span class="line"><span class="regexp">&#125;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<figure class="highlight javascript">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+								<span class="line">9</span><br>
+								<span class="line">10</span><br>
+								<span class="line">11</span><br>
+								<span class="line">12</span><br>
+								<span class="line">13</span><br>
+								<span class="line">14</span><br>
+								<span class="line">15</span><br>
+								<span class="line">16</span><br>
+								<span class="line">17</span><br>
+								<span class="line">18</span><br>
+								<span class="line">19</span><br>
+								<span class="line">20</span><br>
+								<span class="line">21</span><br>
+								<span class="line">22</span><br>
+								<span class="line">23</span><br>
+								<span class="line">24</span><br>
+								<span class="line">25</span><br>
+								<span class="line">26</span><br>
+								<span class="line">27</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="keyword">constructor</span>(props) &#123;</span><br>
+								<span class="line"><span class="keyword">super</span>(props)</span><br>
+								<span class="line"></span><br>
+								<span class="line"><span class="keyword">this</span>.state = &#123;</span><br>
+								<span class="line"> name: <span class="string">''</span>,</span><br>
+								<span class="line"> phone: <span class="string">''</span>,</span><br>
+								<span class="line"> &#125;</span><br>
+								<span class="line">&#125;</span><br>
+								<span class="line"></span><br>
+								<span class="line">handleSubmit = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br>
+								<span class="line"> e.preventDefault()</span><br>
+								<span class="line"><span class="keyword">this</span>.props.onCreate(<span class="keyword">this</span>.state) <span class="comment">// 부모 component로 this.state 데이터 전달</span></span><br>
+								<span class="line">&#125;</span><br>
+								<span class="line"></span><br>
+								<span class="line">render() &#123;</span><br>
+								<span class="line"><span class="keyword">return</span>(</span><br>
+								<span class="line"> &lt;form onSubmit=&#123;<span class="keyword">this</span>.handleSubmit&#125;&gt;</span><br>
+								<span class="line"> &lt;input type=<span class="string">"text"</span></span><br>
+								<span class="line"> placeholder=<span class="string">"NameBox"</span></span><br>
+								<span class="line"> name=<span class="string">"name"</span></span><br>
+								<span class="line"> value=&#123;<span class="keyword">this</span>.state.name&#125;</span><br>
+								<span class="line"> onChange=&#123;<span class="keyword">this</span>.handleChange&#125;</span><br>
+								<span class="line"> /&gt;</span><br>
+								<span class="line"> &lt;button type=<span class="string">"submit"</span>&gt;submit button&lt;<span class="regexp">/button&gt;</span></span><br>
+								<span class="line"><span class="regexp"> &lt;/</span>form&gt;</span><br>
+								<span class="line"> )</span><br>
+								<span class="line">&#125;</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<h2 id="image-파일-업로드-및-파일-정보-가져오기"><a href="#image-파일-업로드-및-파일-정보-가져오기" class="headerlink" title="image 파일 업로드 및 파일 정보 가져오기"></a>image 파일 업로드 및 파일 정보 가져오기</h2>
+					<figure class="highlight javascript">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+								<span class="line">9</span><br>
+								<span class="line">10</span><br>
+								<span class="line">11</span><br>
+								<span class="line">12</span><br>
+								<span class="line">13</span><br>
+								<span class="line">14</span><br>
+								<span class="line">15</span><br>
+								<span class="line">16</span><br>
+								<span class="line">17</span><br>
+								<span class="line">18</span><br>
+								<span class="line">19</span><br>
+								<span class="line">20</span><br>
+								<span class="line">21</span><br>
+								<span class="line">22</span><br>
+								<span class="line">23</span><br>
+								<span class="line">24</span><br>
+								<span class="line">25</span><br>
+								<span class="line">26</span><br>
+								<span class="line">27</span><br>
+								<span class="line">28</span><br>
+								<span class="line">29</span><br>
+								<span class="line">30</span><br>
+								<span class="line">31</span><br>
+								<span class="line">32</span><br>
+								<span class="line">33</span><br>
+								<span class="line">34</span><br>
+								<span class="line">35</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="keyword">constructor</span>(props) &#123;</span><br>
+								<span class="line"><span class="keyword">super</span>(props)</span><br>
+								<span class="line"></span><br>
+								<span class="line"><span class="keyword">this</span>.state = &#123;</span><br>
+								<span class="line"> file: <span class="literal">null</span>,</span><br>
+								<span class="line"> &#125;</span><br>
+								<span class="line">&#125;</span><br>
+								<span class="line"></span><br>
+								<span class="line">fileLoad = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br>
+								<span class="line"><span class="built_in">console</span>.log(e.target.files[<span class="number">0</span>]) <span class="comment">// 업로드 이미지 파일</span></span><br>
+								<span class="line"></span><br>
+								<span class="line"><span class="keyword">const</span> img = <span class="keyword">new</span> Image()</span><br>
+								<span class="line"> img.src = URL.createObjectURL(e.target.files[<span class="number">0</span>]) <span class="comment">// img 객체에 이미지 url 정보 입력</span></span><br>
+								<span class="line"></span><br>
+								<span class="line"> img.onload = <span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="comment">// 이미지 업로드 시 이미지 width, height 정보 출력</span></span><br>
+								<span class="line"><span class="built_in">console</span>.log(<span class="string">'width, height'</span>, img.naturalWidth, img.naturalHeight)</span><br>
+								<span class="line"> &#125;</span><br>
+								<span class="line"></span><br>
+								<span class="line"><span class="keyword">this</span>.setState(&#123;</span><br>
+								<span class="line"> file: URL.createObjectURL(e.target.files[<span class="number">0</span>]) <span class="comment">// 이미지 파일 경로 변수에 저장</span></span><br>
+								<span class="line"> &#125;)</span><br>
+								<span class="line">&#125;</span><br>
+								<span class="line"></span><br>
+								<span class="line">render() &#123;</span><br>
+								<span class="line"><span class="keyword">return</span>(</span><br>
+								<span class="line"> &lt;div&gt;</span><br>
+								<span class="line"> NEW BANNER</span><br>
+								<span class="line"> &lt;div className=<span class="string">"bannerImg"</span>&gt;</span><br>
+								<span class="line"> &lt;img src=&#123;<span class="keyword">this</span>.state.file&#125;/&gt; <span class="comment">// 이미지 출력</span></span><br>
+								<span class="line"> &lt;<span class="regexp">/div&gt;</span></span><br>
+								<span class="line"><span class="regexp"> &lt;input type="file" id="uploadImg" onChange=&#123;this.fileLoad&#125; hidden/</span>&gt;</span><br>
+								<span class="line"> &lt;Button type=<span class="string">"photo"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">label</span><span class="attr">for</span>=<span class="string">"uploadImg"</span>&gt;</span>PHOTO<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span></span><br>
+								<span class="line"> &lt;<span class="regexp">/div&gt;</span></span><br>
+								<span class="line"><span class="regexp"> )</span></span><br>
+								<span class="line"><span class="regexp">&#125;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+					<h2 id="JSX-태그-내에-javascript-코드와-문자열-혼용하여-사용하기"><a href="#JSX-태그-내에-javascript-코드와-문자열-혼용하여-사용하기" class="headerlink" title="JSX 태그 내에 javascript 코드와 문자열 혼용하여 사용하기"></a>JSX 태그 내에 javascript 코드와 문자열 혼용하여 사용하기</h2>
+					<p>
+						아래의 className 속성을 참조하면 javascript 코드는 기존과 같이 {} 괄호안에 사용하고<br>
+						javascript 소스 내에서 ‘’ 안에 JSX태그 내에서 사용하고자하는 문자열을 넣는다
+					</p>
+					<figure class="highlight javascript">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line">&lt;button type=<span class="string">"button"</span> className=&#123;<span class="keyword">this</span>.state.onOff === <span class="literal">true</span> ? <span class="string">'btnOn'</span> : <span class="string">'btnOff'</span>&#125;&gt;</span><br>
+								<span class="line"> ON</span><br>
+								<span class="line">&lt;<span class="regexp">/button&gt;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+				</div>
+				<footer class="article-footer">
+				<a data-url="https://kajagyu.github.io/blog/2018/06/28/react 정리/" data-id="cjjhuz5na0003daz3w4ctt3eg" class="article-share-link">Share</a>
+				</footer>
+			</div>
+			</article>
+			<article id="post-react 에러 정리" class="article article-type-post" itemscope itemprop="blogPost">
+			<div class="article-meta">
+				<a href="/blog/2018/06/28/react 에러 정리/" class="article-date">
+				<time datetime="2018-06-28T09:54:26.000Z" itemprop="datePublished">2018-06-28</time>
+				</a>
+			</div>
+			<div class="article-inner">
+				<header class="article-header">
+				<h1 itemprop="name">
+				<a class="article-title" href="/blog/2018/06/28/react 에러 정리/">react 에러 정리</a>
+				</h1>
+				</header>
+				<div class="article-entry" itemprop="articleBody">
+					<h2 id="expected-this-to-be-used-by-class-method…"><a href="#expected-this-to-be-used-by-class-method…" class="headerlink" title="expected this to be used by class method…"></a>expected this to be used by class method…</h2>
+					<p>
+						에러 문구:<br>
+						<code>expected this to be used by class method</code>
+					</p>
+					<p>
+						클래스 메소드에서 this를 사용하지 않을때 발생<br>
+						-&gt; this 키워드를 사용하여 해결(생성자에서 this.state data를 초기화 하는 등…)
+					</p>
+					<hr>
+					<h2 id="Objects-are-not-valid-as-a-React-child"><a href="#Objects-are-not-valid-as-a-React-child" class="headerlink" title="Objects are not valid as a React child.."></a>Objects are not valid as a React child..</h2>
+					<p>
+						에러문구:<br>
+						<code>Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.</code>
+					</p>
+					<p>
+						rendering 시에 array 형 데이터를 올바르게 파싱하지 않을때 발생<br>
+						-&gt; render 메소드를 확인하여 array형 데이터를 map을 이용하는 등으로 파싱을 올바르게 하여 출력할것
+					</p>
+				</div>
+				<footer class="article-footer">
+				<a data-url="https://kajagyu.github.io/blog/2018/06/28/react 에러 정리/" data-id="cjjhuz5nc0005daz3oh8szyga" class="article-share-link">Share</a>
+				</footer>
+			</div>
+			</article>
+			<article id="post-javascript 정리" class="article article-type-post" itemscope itemprop="blogPost">
+			<div class="article-meta">
+				<a href="/blog/2018/06/28/javascript 정리/" class="article-date">
+				<time datetime="2018-06-28T09:46:23.000Z" itemprop="datePublished">2018-06-28</time>
+				</a>
+			</div>
+			<div class="article-inner">
+				<header class="article-header">
+				<h1 itemprop="name">
+				<a class="article-title" href="/blog/2018/06/28/javascript 정리/">javascript 정리</a>
+				</h1>
+				</header>
+				<div class="article-entry" itemprop="articleBody">
+					<h2 id="URL-경로-파싱하기"><a href="#URL-경로-파싱하기" class="headerlink" title="URL 경로 파싱하기"></a>URL 경로 파싱하기</h2>
+					<p>
+						URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용<br>
+						아래의 예에 대한 설명을 다음과 같음<br>
+						<code>window.location.pathname</code><br>
+						-&gt; URL 경로 가져옴<br>
+						<code>window.location.pathname.split(&#39;/&#39;)</code><br>
+						-&gt; URL 경로를 / 로 split하여 배열 데이터로 초기화<br>
+						<code>pathName[pathName.length - 1]</code><br>
+						-&gt; 배열 데이터에 들어있는 URL 경로에서 맨 마지막 경로명을 가져와서 초기화
+					</p>
+					<figure class="highlight javascript">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="keyword">var</span> pathName = <span class="built_in">window</span>.location.pathname.split(<span class="string">'/'</span>);</span><br>
+								<span class="line"><span class="keyword">var</span> lastUrlName = pathName[pathName.length - <span class="number">1</span>];</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<p>
+						위와 마찬가지로 URL 경로를 가져오지만 window 객체를 이용하는것이 아닌 dom을 이용해<br>
+						같은 결과를 얻고자 한다면 아래와 같이 코딩함
+					</p>
+					<figure class="highlight javascript">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="built_in">console</span>.log(<span class="string">'document.URL'</span>, <span class="built_in">document</span>.URL);</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+					<h2 id="confirm-창-띄운-후-확인-취소-클릭에-따른-분기처리-하기"><a href="#confirm-창-띄운-후-확인-취소-클릭에-따른-분기처리-하기" class="headerlink" title="confirm 창 띄운 후 확인/취소 클릭에 따른 분기처리 하기"></a>confirm 창 띄운 후 확인/취소 클릭에 따른 분기처리 하기</h2>
+					<p>
+						confirm 창은 보통 alert창과 같이 <code>confirm(&#39;&#39;)</code> 으로 호출하지만<br>
+						confirm 창을 띄운 후 확인, 취소 버튼에 따른 분기처리는 아래 코드와 같이 하도록 함
+					</p>
+					<figure class="highlight javascript">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="function"><span class="keyword">function</span><span class="title">confirmPop</span>(<span class="params"></span>) </span>&#123;</span><br>
+								<span class="line"><span class="keyword">if</span>(confirm(<span class="string">'confirm yes or no'</span>)==<span class="literal">true</span>) &#123;</span><br>
+								<span class="line"> location=<span class="string">'https://www.google.com'</span></span><br>
+								<span class="line"> &#125; <span class="keyword">else</span> &#123;</span><br>
+								<span class="line"> alert(<span class="string">'cancel click'</span>);</span><br>
+								<span class="line"> &#125;</span><br>
+								<span class="line">&#125;</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+					<h2 id="자바스크립트-에러인지-감지하는-함수"><a href="#자바스크립트-에러인지-감지하는-함수" class="headerlink" title="자바스크립트 에러인지 감지하는 함수"></a>자바스크립트 에러인지 감지하는 함수</h2>
+					<p>
+						자바스크립트 내에 에러가 발생한다면 에러를 감지하는 window 객체 메소드가 있음<br>
+						그 코드는 아래와 같음
+					</p>
+					<figure class="highlight javascript">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+								<span class="line">9</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line">&lt;script&gt;</span><br>
+								<span class="line"><span class="function"><span class="keyword">function</span><span class="title">blockError</span>(<span class="params"></span>)</span>&#123;</span><br>
+								<span class="line"><span class="keyword">return</span><span class="literal">true</span>; <span class="comment">// return true로 할 시 에러를 발생시키지 않습니다</span></span><br>
+								<span class="line"> &#125;</span><br>
+								<span class="line"><span class="built_in">window</span>.onerror = blockError; <span class="comment">// window.onerror 함수를 통해 에러를 감지합니다</span></span><br>
+								<span class="line">&lt;<span class="regexp">/script&gt;</span></span><br>
+								<span class="line"><span class="regexp">&lt;script&gt;</span></span><br>
+								<span class="line"><span class="regexp"> e /</span><span class="regexp">/ 에러를 유발하는 코드입니다</span></span><br>
+								<span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<h2 id="마우스오버-마우스아웃"><a href="#마우스오버-마우스아웃" class="headerlink" title="마우스오버, 마우스아웃"></a>마우스오버, 마우스아웃</h2>
+					<p>
+						해당영역에 마우스가 올라가면 마우스 오버, 해당 영역 밖에 마우스가 위치하면 마우스 아웃.
+					</p>
+					<figure class="highlight html">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+								<span class="line">9</span><br>
+								<span class="line">10</span><br>
+								<span class="line">11</span><br>
+								<span class="line">12</span><br>
+								<span class="line">13</span><br>
+								<span class="line">14</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="tag">&lt;<span class="name">a</span><span class="attr">href</span>=<span class="string">"#"</span></span></span><br>
+								<span class="line"><span class="tag"><span class="attr">onmouseover</span>=<span class="string">"document.menu1.src='http://www.blueb.co.kr/SRC/flash/image/thum_03.jpg'"</span></span></span><br>
+								<span class="line"><span class="tag"><span class="attr">onmouseout</span>=<span class="string">"document.menu1.src='http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg'"</span></span></span><br>
+								<span class="line"><span class="tag">&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">img</span><span class="attr">src</span>=<span class="string">"http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg"</span><span class="attr">name</span>=<span class="string">"menu1"</span><span class="attr">border</span>=<span class="string">"0"</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br>
+								<span class="line"></span><br>
+								<span class="line"></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">a</span><span class="attr">href</span>=<span class="string">"#"</span></span></span><br>
+								<span class="line"><span class="tag"><span class="attr">onmouseover</span>=<span class="string">"document.menu2.src='http://www.blueb.co.kr/SRC/flash/image/thum_01.jpg'"</span></span></span><br>
+								<span class="line"><span class="tag"><span class="attr">onmouseout</span>=<span class="string">"document.menu2.src='http://www.blueb.co.kr/SRC/flash/image/thum_06.jpg'"</span></span></span><br>
+								<span class="line"><span class="tag">&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">img</span><span class="attr">src</span>=<span class="string">"http://www.blueb.co.kr/SRC/flash/image/thum_06.jpg"</span><span class="attr">name</span>=<span class="string">"menu2"</span><span class="attr">border</span>=<span class="string">"0"</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<p>
+						위와 비슷하지만 위에서 name 속성을 통해 이미지 경로를 지정한것과 달리<br>
+						아래 코드처럼 직접 해당 이미지 src를 직접 지정할 수 있음
+					</p>
+					<figure class="highlight html">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="tag">&lt;<span class="name">a</span><span class="attr">href</span>=<span class="string">"#"</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">img</span><span class="attr">src</span>=<span class="string">"http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg"</span></span></span><br>
+								<span class="line"><span class="tag"><span class="attr">border</span>=<span class="string">"0"</span></span></span><br>
+								<span class="line"><span class="tag"><span class="attr">onmouseover</span>=<span class="string">"this.src='http://www.blueb.co.kr/SRC/flash/image/thum_03.jpg'"</span></span></span><br>
+								<span class="line"><span class="tag"><span class="attr">onmouseout</span> = <span class="string">"this.src='http://www.blueb.co.kr/SRC/flash/image/thum_04.jpg'"</span></span></span><br>
+								<span class="line"><span class="tag">&gt;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+					<h2 id="페이지-로드-후-함수-호출하기"><a href="#페이지-로드-후-함수-호출하기" class="headerlink" title="페이지 로드 후 함수 호출하기"></a>페이지 로드 후 함수 호출하기</h2>
+					<p>
+						body 태그 안의 onload 속성으로 인하여 페이지 로드 후 이벤트 발생.<br>
+						setTimeout 함수의 두번째 인자로 경과 시간 후 첫번째 인자의 이벤트 발생.<br>
+						setTimeout은 window 객체의 메소드임
+					</p>
+					<figure class="highlight html">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="tag">&lt;<span class="name">BODY</span><span class="attr">onLoad</span>=<span class="string">"setTimeout('startAlert()',3000)"</span>&gt;</span></span><br>
+								<span class="line">3초후 경고창이 실행됩니다. (1000 = 1초)</span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">BODY</span>&gt;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+					<h2 id="input-box-text-area를-클릭-시-안의-텍스트를-한번에-포커싱하기"><a href="#input-box-text-area를-클릭-시-안의-텍스트를-한번에-포커싱하기" class="headerlink" title="input box, text area를 클릭 시 안의 텍스트를 한번에 포커싱하기"></a>input box, text area를 클릭 시 안의 텍스트를 한번에 포커싱하기</h2>
+					<p>
+						input box, text area 등을 클릭하였을때<br>
+						해당 영역 내의 텍스트를 한꺼번에 포커싱하게 함
+					</p>
+					<figure class="highlight html">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="tag">&lt;<span class="name">input</span><span class="attr">type</span>=<span class="string">"text"</span><span class="attr">value</span>=<span class="string">"input box를 클릭하세요"</span><span class="attr">onfocus</span>=<span class="string">"this.select()"</span> /&gt;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+					<h2 id="키보드-shift-키가-눌렸는지-확인하기"><a href="#키보드-shift-키가-눌렸는지-확인하기" class="headerlink" title="키보드 shift 키가 눌렸는지 확인하기"></a>키보드 shift 키가 눌렸는지 확인하기</h2>
+					<p>
+						아래 코드와 같이 특정 키보드 키가 눌린 이벤트에 대해 체크. 아래는 shift 키가 눌렸는지 확인하는 코드
+					</p>
+					<figure class="highlight html">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+								<span class="line">9</span><br>
+								<span class="line">10</span><br>
+								<span class="line">11</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="tag">&lt;<span class="name">script</span><span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br>
+								<span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span><span class="title">isKeyPressed</span>(<span class="params">event</span>)</span>&#123;</span></span><br>
+								<span class="line"><span class="javascript"><span class="keyword">if</span> (event.shiftKey==<span class="number">1</span>)&#123;</span></span><br>
+								<span class="line"><span class="javascript"> alert(<span class="string">"쉬프트키 살살 좀 누르세요!"</span>)</span></span><br>
+								<span class="line"><span class="javascript"> &#125;<span class="keyword">else</span>&#123;</span></span><br>
+								<span class="line"><span class="javascript"> alert(<span class="string">"쉬프트키 안누르셨어요...키보드 아까우세요?"</span>)</span></span><br>
+								<span class="line"><span class="undefined"> &#125;</span></span><br>
+								<span class="line"><span class="undefined">&#125;</span></span><br>
+								<span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br>
+								<span class="line"></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">a</span><span class="attr">href</span>=<span class="string">"#"</span><span class="attr">onclick</span>=<span class="string">"isKeyPressed(event); return false;"</span>&gt;</span>클릭해보세요..<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+					<h2 id="오늘-날짜-추출"><a href="#오늘-날짜-추출" class="headerlink" title="오늘 날짜 추출"></a>오늘 날짜 추출</h2>
+					<p>
+						Date() 객체를 이용하여 오늘 날짜 추출하기
+					</p>
+					<figure class="highlight javascript">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="keyword">var</span> currentTime = <span class="keyword">new</span><span class="built_in">Date</span>()</span><br>
+								<span class="line"><span class="keyword">var</span> month = currentTime.getMonth() + <span class="number">1</span></span><br>
+								<span class="line"><span class="keyword">var</span> day = currentTime.getDate()</span><br>
+								<span class="line"><span class="keyword">var</span> year = currentTime.getFullYear()</span><br>
+								<span class="line"></span><br>
+								<span class="line"><span class="built_in">document</span>.write(year + <span class="string">"년"</span> + month + <span class="string">"월"</span> + day + <span class="string">"일"</span>)</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+					<h2 id="클릭이벤트를-이용해서-html-태그에-직접-접근-document-getElementById-이용"><a href="#클릭이벤트를-이용해서-html-태그에-직접-접근-document-getElementById-이용" class="headerlink" title="클릭이벤트를 이용해서 html 태그에 직접 접근(document.getElementById() 이용)"></a>클릭이벤트를 이용해서 html 태그에 직접 접근(document.getElementById() 이용)</h2>
+					<p>
+						아래 코딩 예제를 통해 배울 수 있는 것
+					</p>
+					<ol>
+						<li>onclick 이벤트 시 자바스크립트를 호출하는 방법에 대해 숙지할것</li>
+						<li><code>javascript:void(0)</code> 코드를 이용하여 href 속성을 무효화 할 수 있음</li>
+						<li>a 태그에 href를 안주어도 onclick 이벤트를 통해 클릭 이벤트 적용 가능</li>
+						<li><code>document.getElementById()</code>를 이용해 해당 태그의 각 속성에 직접 접근 가능<br>
+						(<code>console.log(document.getElementById())</code>를 통해 확인해 볼 것)</li>
+					</ol>
+					<figure class="highlight html">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+								<span class="line">9</span><br>
+								<span class="line">10</span><br>
+								<span class="line">11</span><br>
+								<span class="line">12</span><br>
+								<span class="line">13</span><br>
+								<span class="line">14</span><br>
+								<span class="line">15</span><br>
+								<span class="line">16</span><br>
+								<span class="line">17</span><br>
+								<span class="line">18</span><br>
+								<span class="line">19</span><br>
+								<span class="line">20</span><br>
+								<span class="line">21</span><br>
+								<span class="line">22</span><br>
+								<span class="line">23</span><br>
+								<span class="line">24</span><br>
+								<span class="line">25</span><br>
+								<span class="line">26</span><br>
+								<span class="line">27</span><br>
+								<span class="line">28</span><br>
+								<span class="line">29</span><br>
+								<span class="line">30</span><br>
+								<span class="line">31</span><br>
+								<span class="line">32</span><br>
+								<span class="line">33</span><br>
+								<span class="line">34</span><br>
+								<span class="line">35</span><br>
+								<span class="line">36</span><br>
+								<span class="line">37</span><br>
+								<span class="line">38</span><br>
+								<span class="line">39</span><br>
+								<span class="line">40</span><br>
+								<span class="line">41</span><br>
+								<span class="line">42</span><br>
+								<span class="line">43</span><br>
+								<span class="line">44</span><br>
+								<span class="line">45</span><br>
+								<span class="line">46</span><br>
+								<span class="line">47</span><br>
+								<span class="line">48</span><br>
+								<span class="line">49</span><br>
+								<span class="line">50</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br>
+								<span class="line"><span class="undefined"> .black_overlay&#123;</span></span><br>
+								<span class="line"><span class="undefined"> display: none;</span></span><br>
+								<span class="line"><span class="undefined"> position: absolute;</span></span><br>
+								<span class="line"><span class="undefined"> top: 0%;</span></span><br>
+								<span class="line"><span class="undefined"> left: 0%;</span></span><br>
+								<span class="line"><span class="undefined"> width: 100%;</span></span><br>
+								<span class="line"><span class="undefined"> height: 1500px;</span></span><br>
+								<span class="line"><span class="undefined"> background-color: black;</span></span><br>
+								<span class="line"><span class="undefined"> z-index:1001;</span></span><br>
+								<span class="line"><span class="undefined"> -moz-opacity: 0.8;</span></span><br>
+								<span class="line"><span class="undefined"> opacity:.80;</span></span><br>
+								<span class="line"><span class="undefined"> filter: alpha(opacity=80);</span></span><br>
+								<span class="line"><span class="undefined"> &#125;</span></span><br>
+								<span class="line"><span class="undefined"> .white_content &#123;</span></span><br>
+								<span class="line"><span class="undefined"> display: none;</span></span><br>
+								<span class="line"><span class="undefined"> position: absolute;</span></span><br>
+								<span class="line"><span class="undefined"> top: 25%;</span></span><br>
+								<span class="line"><span class="undefined"> left: 25%;</span></span><br>
+								<span class="line"><span class="undefined"> width: 50%;</span></span><br>
+								<span class="line"><span class="undefined"> height: 50%;</span></span><br>
+								<span class="line"><span class="undefined"> padding: 16px;</span></span><br>
+								<span class="line"><span class="undefined"> border: 16px solid orange;</span></span><br>
+								<span class="line"><span class="undefined"> background-color: white;</span></span><br>
+								<span class="line"><span class="undefined"> z-index:1002;</span></span><br>
+								<span class="line"><span class="undefined"> overflow: auto;</span></span><br>
+								<span class="line"><span class="undefined"> &#125;</span></span><br>
+								<span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br>
+								<span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span><span class="title">clickEvent</span>(<span class="params"></span>) </span>&#123;</span></span><br>
+								<span class="line"><span class="javascript"><span class="built_in">console</span>.log(<span class="built_in">document</span>.getElementById(<span class="string">'light'</span>))</span></span><br>
+								<span class="line"><span class="javascript"><span class="built_in">document</span>.getElementById(<span class="string">'light'</span>).style.display=<span class="string">'block'</span>;</span></span><br>
+								<span class="line"><span class="javascript"><span class="built_in">document</span>.getElementById(<span class="string">'fade'</span>).style.display=<span class="string">'block'</span></span></span><br>
+								<span class="line"><span class="undefined"> &#125;</span></span><br>
+								<span class="line"><span class="undefined"></span></span><br>
+								<span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span><span class="title">closeEvent</span>(<span class="params"></span>) </span>&#123;</span></span><br>
+								<span class="line"><span class="javascript"><span class="built_in">document</span>.getElementById(<span class="string">'light'</span>).style.display=<span class="string">'none'</span>;</span></span><br>
+								<span class="line"><span class="javascript"><span class="built_in">document</span>.getElementById(<span class="string">'fade'</span>).style.display=<span class="string">'none'</span></span></span><br>
+								<span class="line"><span class="undefined"> &#125;</span></span><br>
+								<span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">a</span><span class="attr">href</span>=<span class="string">"javascript:void(0)"</span><span class="attr">onclick</span>=<span class="string">"clickEvent()"</span>&gt;</span>효과보기<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">div</span><span class="attr">id</span>=<span class="string">"light"</span><span class="attr">class</span>=<span class="string">"white_content"</span>&gt;</span></span><br>
+								<span class="line"> 내용을 입력하세요^^</span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">a</span><span class="attr">onclick</span>=<span class="string">"closeEvent()"</span>&gt;</span>닫기<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">div</span><span class="attr">id</span>=<span class="string">"fade"</span><span class="attr">class</span>=<span class="string">"black_overlay"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+					<h2 id="클릭이벤트를-이용해서-html-태그에-직접-접근-innerHTML-이용"><a href="#클릭이벤트를-이용해서-html-태그에-직접-접근-innerHTML-이용" class="headerlink" title="클릭이벤트를 이용해서 html 태그에 직접 접근(innerHTML 이용)"></a>클릭이벤트를 이용해서 html 태그에 직접 접근(innerHTML 이용)</h2>
+					<p>
+						아래 코딩 예제를 통해 배울 수 있는 것
+					</p>
+					<ol>
+						<li>태그의 id 속성을 이용하여 innerHTML로 해당 태그에 접근 및 html 태그 변경 가능</li>
+						<li>상위 태그를 innerHTML로 insert하면 그 상위 태그의 하위 태그도 영향받아 해당 상위 태그영역을 덮어씀</li>
+						<li>this 키워드를 이용하여 해당 html 페이지를 지정함</li>
+					</ol>
+					<figure class="highlight html">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+								<span class="line">9</span><br>
+								<span class="line">10</span><br>
+								<span class="line">11</span><br>
+								<span class="line">12</span><br>
+								<span class="line">13</span><br>
+								<span class="line">14</span><br>
+								<span class="line">15</span><br>
+								<span class="line">16</span><br>
+								<span class="line">17</span><br>
+								<span class="line">18</span><br>
+								<span class="line">19</span><br>
+								<span class="line">20</span><br>
+								<span class="line">21</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br>
+								<span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span><span class="title">ps</span>(<span class="params"></span>)</span>&#123;</span></span><br>
+								<span class="line"><span class="javascript"><span class="keyword">if</span> (<span class="keyword">this</span>.forms.password.type=<span class="string">"password"</span>) &#123;</span></span><br>
+								<span class="line"><span class="xml"> box.innerHTML="<span class="tag">&lt;<span class="name">input</span><span class="attr">type</span>=<span class="string">\</span>"<span class="attr">html</span>\" <span class="attr">name</span>=<span class="string">\</span>"<span class="attr">password</span>\" <span class="attr">size</span>=<span class="string">\</span>"<span class="attr">20</span>\" <span class="attr">value</span>=<span class="string">"+this.forms.password.value+"</span>&gt;</span>";</span></span><br>
+								<span class="line"><span class="xml"> click.innerHTML="<span class="tag">&lt;<span class="name">a</span><span class="attr">href</span>=<span class="string">\</span>"<span class="attr">javascript:txt</span>()\"&gt;</span>숨기기<span class="tag">&lt;/<span class="name">a</span>&gt;</span>"</span></span><br>
+								<span class="line"><span class="undefined"> &#125;</span></span><br>
+								<span class="line"><span class="undefined">&#125;</span></span><br>
+								<span class="line"><span class="undefined"></span></span><br>
+								<span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span><span class="title">txt</span>(<span class="params"></span>)</span>&#123;</span></span><br>
+								<span class="line"><span class="javascript"><span class="keyword">if</span> (<span class="keyword">this</span>.forms.password.type=<span class="string">"text"</span>) &#123;</span></span><br>
+								<span class="line"><span class="xml"> box.innerHTML="<span class="tag">&lt;<span class="name">input</span><span class="attr">type</span>=<span class="string">\</span>"<span class="attr">password</span>\" <span class="attr">name</span>=<span class="string">\</span>"<span class="attr">password</span>\" <span class="attr">size</span>=<span class="string">\</span>"<span class="attr">20</span>\" <span class="attr">value</span>=<span class="string">"+this.forms.password.value+"</span>&gt;</span>";</span></span><br>
+								<span class="line"><span class="xml"> click.innerHTML="<span class="tag">&lt;<span class="name">a</span><span class="attr">href</span>=<span class="string">\</span>"<span class="attr">javascript:ps</span>()\"&gt;</span>보기<span class="tag">&lt;/<span class="name">a</span>&gt;</span>"</span></span><br>
+								<span class="line"><span class="undefined"> &#125;</span></span><br>
+								<span class="line"><span class="undefined">&#125;</span></span><br>
+								<span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">form</span><span class="attr">method</span>=<span class="string">"POST"</span><span class="attr">action</span>=<span class="string">"addcheck.asp"</span><span class="attr">name</span>=<span class="string">"forms"</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">span</span><span class="attr">id</span>=<span class="string">box</span>&gt;</span><span class="tag">&lt;<span class="name">input</span><span class="attr">type</span>=<span class="string">"password"</span><span class="attr">name</span>=<span class="string">"password"</span><span class="attr">size</span>=<span class="string">"20"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">span</span><span class="attr">id</span>=<span class="string">click</span>&gt;</span><span class="tag">&lt;<span class="name">a</span><span class="attr">href</span>=<span class="string">"javascript:ps()"</span>&gt;</span>보기<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<hr>
+					<h2 id="document-getElementById-innerHTML-사용-예제"><a href="#document-getElementById-innerHTML-사용-예제" class="headerlink" title="document.getElementById().innerHTML 사용 예제"></a>document.getElementById().innerHTML 사용 예제</h2>
+					<p>
+						<code>document.getElementById().innerHTML</code>의 사용 예제를 확인해보자
+					</p>
+					<figure class="highlight html">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+								<span class="line">2</span><br>
+								<span class="line">3</span><br>
+								<span class="line">4</span><br>
+								<span class="line">5</span><br>
+								<span class="line">6</span><br>
+								<span class="line">7</span><br>
+								<span class="line">8</span><br>
+								<span class="line">9</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br>
+								<span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span><span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span></span><br>
+								<span class="line"><span class="javascript"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="string">"변경완료!!"</span>;</span></span><br>
+								<span class="line"><span class="undefined"> &#125;</span></span><br>
+								<span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">p</span><span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span>이곳의 텍스트를 변경<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;<span class="name">button</span><span class="attr">type</span>=<span class="string">"button"</span><span class="attr">onclick</span>=<span class="string">"myFunction()"</span>&gt;</span>클릭<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br>
+								<span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+				</div>
+				<footer class="article-footer">
+				<a data-url="https://kajagyu.github.io/blog/2018/06/28/javascript 정리/" data-id="cjjhuz5n70001daz35q8nbg73" class="article-share-link">Share</a>
+				</footer>
+			</div>
+			</article>
+			<article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+			<div class="article-meta">
+				<a href="/blog/2018/06/28/hello-world/" class="article-date">
+				<time datetime="2018-06-28T09:29:07.039Z" itemprop="datePublished">2018-06-28</time>
+				</a>
+			</div>
+			<div class="article-inner">
+				<header class="article-header">
+				<h1 itemprop="name">
+				<a class="article-title" href="/blog/2018/06/28/hello-world/">Hello World</a>
+				</h1>
+				</header>
+				<div class="article-entry" itemprop="articleBody">
+					<p>
+						Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.
+					</p>
+					<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
+					<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>
+					<figure class="highlight bash">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line">$ hexo new <span class="string">"My New Post"</span></span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<p>
+						More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a>
+					</p>
+					<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3>
+					<figure class="highlight bash">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line">$ hexo server</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<p>
+						More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a>
+					</p>
+					<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3>
+					<figure class="highlight bash">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line">$ hexo generate</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<p>
+						More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a>
+					</p>
+					<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3>
+					<figure class="highlight bash">
+					<table>
+					<tr>
+						<td class="gutter">
+							<pre>
+								<span class="line">1</span><br>
+							</pre>
+						</td>
+						<td class="code">
+							<pre>
+								<span class="line">$ hexo deploy</span><br>
+							</pre>
+						</td>
+					</tr>
+					</table>
+					</figure>
+					<p>
+						More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a>
+					</p>
+				</div>
+				<footer class="article-footer">
+				<a data-url="https://kajagyu.github.io/blog/2018/06/28/hello-world/" data-id="cjjhuz5n40000daz3fdgr3e8g" class="article-share-link">Share</a>
+				</footer>
+			</div>
+			</article>
+			</section>
+			<aside id="sidebar">
+			<div class="widget-wrap">
+				<h3 class="widget-title">Archives</h3>
+				<div class="widget">
+					<ul class="archive-list">
+						<li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/07/">July 2018</a></li>
+						<li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/06/">June 2018</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="widget-wrap">
+				<h3 class="widget-title">Recent Posts</h3>
+				<div class="widget">
+					<ul>
+						<li>
+						<a href="/blog/2018/07/03/기타 정리/">기타 정리</a>
+						</li>
+						<li>
+						<a href="/blog/2018/06/29/html&css정리/">html&amp;css 정리</a>
+						</li>
+						<li>
+						<a href="/blog/2018/06/28/react 정리/">react</a>
+						</li>
+						<li>
+						<a href="/blog/2018/06/28/react 에러 정리/">react 에러 정리</a>
+						</li>
+						<li>
+						<a href="/blog/2018/06/28/javascript 정리/">javascript 정리</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			</aside>
+		</div>
+		<footer id="footer">
+		<div class="outer">
+			<div id="footer-info" class="inner">
+				 &copy; 2018 John Doe<br>
+				 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+			</div>
+		</div>
+		</footer>
+	</div>
+	<nav id="mobile-nav">
+	<a href="/blog/" class="mobile-nav-link">Home</a>
+	<a href="/blog/archives" class="mobile-nav-link">Archives</a>
+	</nav>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+	<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="/blog/js/script.js"></script>
+</div>
 </body>
 </html>
