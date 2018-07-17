@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="checkbox 사용하기checkbox는 아래와 같이 사용함fieldset 태그나 legend 태그는 사용하지 않아도 무방함.실제 checkbox 태그는 div 안의 태그인데 태그에 대한 속성은 아래와 같음type: checkbox 타입 지정id: label의 for 속성과 매치하기 위해 사용name: 해당 checkbox를 나타내는 속성value: che">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-09T07:46:51.241Z">
+<meta property="og:updated_time" content="2018-07-17T07:49:01.838Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html&amp;css 정리">
 <meta name="twitter:description" content="checkbox 사용하기checkbox는 아래와 같이 사용함fieldset 태그나 legend 태그는 사용하지 않아도 무방함.실제 checkbox 태그는 div 안의 태그인데 태그에 대한 속성은 아래와 같음type: checkbox 타입 지정id: label의 for 속성과 매치하기 위해 사용name: 해당 checkbox를 나타내는 속성value: che">
@@ -104,6 +104,9 @@
 <hr>
 <h2 id="div를-브라우저-화면-중앙에-배치하기"><a href="#div를-브라우저-화면-중앙에-배치하기" class="headerlink" title="div를 브라우저(화면) 중앙에 배치하기"></a>div를 브라우저(화면) 중앙에 배치하기</h2><p>사용하고자하는 div (id=intro)가 가로 세로 사이즈가 각각 300, 150 이라고 가정하면..<br>아래와 같이 div 레이어를 좌측 및 상단으로 절반을 밀어낸후, 화면의 50%영역에 배치하면 중앙에 배치된 효과를 얻을 수 있음.</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#intro</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: -<span class="number">150px</span> <span class="number">0</span> <span class="number">0</span> -<span class="number">75px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="div-가운데-정렬-div-안의-div-가운데-정렬하기"><a href="#div-가운데-정렬-div-안의-div-가운데-정렬하기" class="headerlink" title="div 가운데 정렬, div 안의 div 가운데 정렬하기"></a>div 가운데 정렬, div 안의 div 가운데 정렬하기</h2><p>지정한 div 가운데 정렬:<br><code>margin: auto;</code> 혹은 <code>margin-left: auto; margin-right: auto;</code> 로 코딩</p>
+<p>div 안의 div 가운데 정렬하기<br><code>text-align: center;</code> 로 코드<br>(텍스트 뿐만이 아닌 위와 같이 div도 정렬 가능)</p>
 
       
     </div>
