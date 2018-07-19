@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="URL 경로 파싱하기URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname-&amp;gt; URL 경로 가져옴window.location.pathname.split(&amp;#39;/&amp;#39;)-&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathNam">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-13T01:12:59.261Z">
+<meta property="og:updated_time" content="2018-07-18T05:56:35.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript 정리">
 <meta name="twitter:description" content="URL 경로 파싱하기URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname-&amp;gt; URL 경로 가져옴window.location.pathname.split(&amp;#39;/&amp;#39;)-&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathNam">
@@ -132,6 +132,14 @@
 <hr>
 <h2 id="document-getElementById-innerHTML-사용-예제"><a href="#document-getElementById-innerHTML-사용-예제" class="headerlink" title="document.getElementById().innerHTML 사용 예제"></a>document.getElementById().innerHTML 사용 예제</h2><p><code>document.getElementById().innerHTML</code>의 사용 예제를 확인해보자</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="string">"변경완료!!"</span>;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span>이곳의 텍스트를 변경<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"myFunction()"</span>&gt;</span>클릭<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="특정-배열-안에-다른-특정-배열의-데이터가-들어있는지-찾기"><a href="#특정-배열-안에-다른-특정-배열의-데이터가-들어있는지-찾기" class="headerlink" title="특정 배열 안에 다른 특정 배열의 데이터가 들어있는지 찾기"></a>특정 배열 안에 다른 특정 배열의 데이터가 들어있는지 찾기</h2><p>예를 들어 A와 B 두 개의 배열을 비교하여 A 배열의 특정 데이터가 B 배열의 데이터들 중에 같은 값이<br>있는지 확인하는 코드.</p>
+<p>아래의 코드는 다음과 같음<br>-&gt; array1 배열과 array2 배열을 비교.</p>
+<ol>
+<li><code>forEach()</code><br>-&gt; array1 배열의 각각의 데이터마다 이하 코드를 수행함. item은 각 데이터를 나타내는 임의의 변수, idx는 각 데이터의 index</li>
+<li><code>includes()</code><br>-&gt; 인자로 받은 데이터를 array2 배열에 있는 데이터들 중에 같은 값이 있는지 확인</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array1.forEach(<span class="function">(<span class="params">item, idx</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (array2.includes(item)) &#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
