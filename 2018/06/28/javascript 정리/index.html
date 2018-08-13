@@ -7,17 +7,17 @@
   
   <title>javascript 정리 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="URL 경로 파싱하기URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname-&amp;gt; URL 경로 가져옴window.location.pathname.split(&amp;#39;/&amp;#39;)-&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathNam">
+  <meta name="description" content="URL 경로 파싱하기 URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname-&amp;gt; URL 경로 가져옴window.location.pathname.split(&amp;#39;/&amp;#39;)-&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathNa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript 정리">
 <meta property="og:url" content="https://kajagyu.github.io/blog/2018/06/28/javascript 정리/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="URL 경로 파싱하기URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname-&amp;gt; URL 경로 가져옴window.location.pathname.split(&amp;#39;/&amp;#39;)-&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathNam">
+<meta property="og:description" content="URL 경로 파싱하기 URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname-&amp;gt; URL 경로 가져옴window.location.pathname.split(&amp;#39;/&amp;#39;)-&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathNa">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-02T08:16:10.909Z">
+<meta property="og:updated_time" content="2018-08-13T02:15:01.879Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript 정리">
-<meta name="twitter:description" content="URL 경로 파싱하기URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname-&amp;gt; URL 경로 가져옴window.location.pathname.split(&amp;#39;/&amp;#39;)-&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathNam">
+<meta name="twitter:description" content="URL 경로 파싱하기 URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용아래의 예에 대한 설명을 다음과 같음window.location.pathname-&amp;gt; URL 경로 가져옴window.location.pathname.split(&amp;#39;/&amp;#39;)-&amp;gt; URL 경로를 / 로 split하여 배열 데이터로 초기화pathNa">
   
     <link rel="alternate" href="/blog/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -86,7 +86,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="URL-경로-파싱하기"><a href="#URL-경로-파싱하기" class="headerlink" title="URL 경로 파싱하기"></a>URL 경로 파싱하기</h2><p>URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용<br>아래의 예에 대한 설명을 다음과 같음<br><code>window.location.pathname</code><br>-&gt; URL 경로 가져옴<br><code>window.location.pathname.split(&#39;/&#39;)</code><br>-&gt; URL 경로를 / 로 split하여 배열 데이터로 초기화<br><code>pathName[pathName.length - 1]</code><br>-&gt; 배열 데이터에 들어있는 URL 경로에서 맨 마지막 경로명을 가져와서 초기화</p>
+        <h2 id="URL-경로-파싱하기"><a href="#URL-경로-파싱하기" class="headerlink" title="URL 경로 파싱하기"></a>URL 경로 파싱하기</h2><hr>
+<p>URL 경로를 가져와 파싱하고자 한다면 아래와 같이 window 객체를 이용<br>아래의 예에 대한 설명을 다음과 같음<br><code>window.location.pathname</code><br>-&gt; URL 경로 가져옴<br><code>window.location.pathname.split(&#39;/&#39;)</code><br>-&gt; URL 경로를 / 로 split하여 배열 데이터로 초기화<br><code>pathName[pathName.length - 1]</code><br>-&gt; 배열 데이터에 들어있는 URL 경로에서 맨 마지막 경로명을 가져와서 초기화</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pathName = <span class="built_in">window</span>.location.pathname.split(<span class="string">'/'</span>);</span><br><span class="line"><span class="keyword">var</span> lastUrlName = pathName[pathName.length - <span class="number">1</span>];</span><br></pre></td></tr></table></figure>
 <p>위와 마찬가지로 URL 경로를 가져오지만 window 객체를 이용하는것이 아닌 dom을 이용해<br>같은 결과를 얻고자 한다면 아래와 같이 코딩함</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'document.URL'</span>, <span class="built_in">document</span>.URL);</span><br></pre></td></tr></table></figure>
@@ -146,6 +147,8 @@
 <hr>
 <h2 id="async-await-사용하기"><a href="#async-await-사용하기" class="headerlink" title="async, await 사용하기"></a>async, await 사용하기</h2><p>async, await는 프로그램 코드를 동기화 하기 위해 지원하는 예약어인데 이에 대한 사용은 다음과 같음<br>동기화를 하고자 할 함수에 async 키워드를 함수명 앞에 붙이고, 함수 안에 동기화 할 코드 앞에 await를 붙임<br>이렇게 하면 await로 지정한 코드가 종료된 이후 다음 코드가 실행됨으로 인해 비동기로 인한 문제점을 막을 수 있음</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">login = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> <span class="keyword">this</span>.AdmManage.login(<span class="keyword">this</span>.state.id, <span class="keyword">this</span>.state.pw);</span><br><span class="line">  <span class="keyword">if</span> (getCookie(<span class="string">'userData'</span>)) &#123;</span><br><span class="line">    <span class="keyword">this</span>.props.history.push(<span class="string">'/Stock'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="페이지-리로드"><a href="#페이지-리로드" class="headerlink" title="페이지 리로드"></a>페이지 리로드</h2><p>페이지 리로드는 아래와 같은 코드로 함</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.location.reload();</span><br></pre></td></tr></table></figure>
 
       
     </div>
